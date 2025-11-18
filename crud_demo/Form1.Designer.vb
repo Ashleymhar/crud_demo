@@ -23,12 +23,12 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBoxN = New System.Windows.Forms.TextBox()
+        Me.TextBoxName = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBoxA = New System.Windows.Forms.TextBox()
+        Me.TextBoxAge = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBoxE = New System.Windows.Forms.TextBox()
+        Me.TextBoxEmail = New System.Windows.Forms.TextBox()
         Me.ButtonInsert = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -41,12 +41,12 @@ Partial Class Form1
         Me.Button1.Text = "Connect MySql"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'TextBoxN
+        'TextBoxName
         '
-        Me.TextBoxN.Location = New System.Drawing.Point(404, 189)
-        Me.TextBoxN.Name = "TextBoxN"
-        Me.TextBoxN.Size = New System.Drawing.Size(100, 20)
-        Me.TextBoxN.TabIndex = 1
+        Me.TextBoxName.Location = New System.Drawing.Point(404, 189)
+        Me.TextBoxName.Name = "TextBoxName"
+        Me.TextBoxName.Size = New System.Drawing.Size(100, 20)
+        Me.TextBoxName.TabIndex = 1
         '
         'Label1
         '
@@ -66,12 +66,12 @@ Partial Class Form1
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Age"
         '
-        'TextBoxA
+        'TextBoxAge
         '
-        Me.TextBoxA.Location = New System.Drawing.Point(404, 218)
-        Me.TextBoxA.Name = "TextBoxA"
-        Me.TextBoxA.Size = New System.Drawing.Size(100, 20)
-        Me.TextBoxA.TabIndex = 3
+        Me.TextBoxAge.Location = New System.Drawing.Point(404, 218)
+        Me.TextBoxAge.Name = "TextBoxAge"
+        Me.TextBoxAge.Size = New System.Drawing.Size(100, 20)
+        Me.TextBoxAge.TabIndex = 3
         '
         'Label3
         '
@@ -82,12 +82,12 @@ Partial Class Form1
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Email"
         '
-        'TextBoxE
+        'TextBoxEmail
         '
-        Me.TextBoxE.Location = New System.Drawing.Point(404, 241)
-        Me.TextBoxE.Name = "TextBoxE"
-        Me.TextBoxE.Size = New System.Drawing.Size(100, 20)
-        Me.TextBoxE.TabIndex = 5
+        Me.TextBoxEmail.Location = New System.Drawing.Point(404, 241)
+        Me.TextBoxEmail.Name = "TextBoxEmail"
+        Me.TextBoxEmail.Size = New System.Drawing.Size(100, 20)
+        Me.TextBoxEmail.TabIndex = 5
         '
         'ButtonInsert
         '
@@ -105,11 +105,11 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.ButtonInsert)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBoxE)
+        Me.Controls.Add(Me.TextBoxEmail)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBoxA)
+        Me.Controls.Add(Me.TextBoxAge)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBoxN)
+        Me.Controls.Add(Me.TextBoxName)
         Me.Controls.Add(Me.Button1)
         Me.Name = "Form1"
         Me.Text = "Form1"
@@ -119,11 +119,11 @@ Partial Class Form1
     End Sub
 
     Friend WithEvents Button1 As Button
-    Friend WithEvents TextBoxN As TextBox
+    Friend WithEvents TextBoxName As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBoxA As TextBox
+    Friend WithEvents TextBoxAge As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBoxE As TextBox
+    Friend WithEvents TextBoxEmail As TextBox
     Friend WithEvents ButtonInsert As Button
 End Class
