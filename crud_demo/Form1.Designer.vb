@@ -22,7 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ButtonConnect = New System.Windows.Forms.Button()
         Me.TextBoxName = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -32,17 +32,20 @@ Partial Class Form1
         Me.ButtonInsert = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.ButtonUpdate = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ButtonRead = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Button1
+        'ButtonConnect
         '
-        Me.Button1.Location = New System.Drawing.Point(192, 37)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(203, 61)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Connect MySql"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.ButtonConnect.Location = New System.Drawing.Point(192, 37)
+        Me.ButtonConnect.Name = "ButtonConnect"
+        Me.ButtonConnect.Size = New System.Drawing.Size(203, 61)
+        Me.ButtonConnect.TabIndex = 0
+        Me.ButtonConnect.Text = "Connect MySql"
+        Me.ButtonConnect.UseVisualStyleBackColor = True
         '
         'TextBoxName
         '
@@ -118,11 +121,41 @@ Partial Class Form1
         Me.Button2.Text = "SELECT"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'ButtonUpdate
+        '
+        Me.ButtonUpdate.Location = New System.Drawing.Point(401, 230)
+        Me.ButtonUpdate.Name = "ButtonUpdate"
+        Me.ButtonUpdate.Size = New System.Drawing.Size(172, 50)
+        Me.ButtonUpdate.TabIndex = 10
+        Me.ButtonUpdate.Text = "Edit"
+        Me.ButtonUpdate.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(401, 286)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(172, 46)
+        Me.Button1.TabIndex = 11
+        Me.Button1.Text = "Delete"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'ButtonRead
+        '
+        Me.ButtonRead.Location = New System.Drawing.Point(498, 142)
+        Me.ButtonRead.Name = "ButtonRead"
+        Me.ButtonRead.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonRead.TabIndex = 12
+        Me.ButtonRead.Text = "Read"
+        Me.ButtonRead.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(971, 539)
+        Me.Controls.Add(Me.ButtonRead)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.ButtonUpdate)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.ButtonInsert)
@@ -132,7 +165,7 @@ Partial Class Form1
         Me.Controls.Add(Me.TextBoxAge)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBoxName)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.ButtonConnect)
         Me.Name = "Form1"
         Me.Text = "Form1"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -141,7 +174,7 @@ Partial Class Form1
 
     End Sub
 
-    Friend WithEvents Button1 As Button
+    Friend WithEvents ButtonConnect As Button
     Friend WithEvents TextBoxName As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
@@ -151,4 +184,7 @@ Partial Class Form1
     Friend WithEvents ButtonInsert As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Button2 As Button
+    Friend WithEvents ButtonUpdate As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents ButtonRead As Button
 End Class
