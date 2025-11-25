@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.ButtonConnect = New System.Windows.Forms.Button()
         Me.TextBoxName = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -33,14 +34,16 @@ Partial Class Form1
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.ButtonUpdate = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ButtonDelete = New System.Windows.Forms.Button()
         Me.ButtonRead = New System.Windows.Forms.Button()
+        Me.TextBoxHiddenId = New System.Windows.Forms.TextBox()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ButtonConnect
         '
-        Me.ButtonConnect.Location = New System.Drawing.Point(192, 37)
+        Me.ButtonConnect.Location = New System.Drawing.Point(293, 49)
         Me.ButtonConnect.Name = "ButtonConnect"
         Me.ButtonConnect.Size = New System.Drawing.Size(203, 61)
         Me.ButtonConnect.TabIndex = 0
@@ -114,7 +117,7 @@ Partial Class Form1
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(192, 286)
+        Me.Button2.Location = New System.Drawing.Point(192, 284)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(203, 50)
         Me.Button2.TabIndex = 9
@@ -127,34 +130,48 @@ Partial Class Form1
         Me.ButtonUpdate.Name = "ButtonUpdate"
         Me.ButtonUpdate.Size = New System.Drawing.Size(172, 50)
         Me.ButtonUpdate.TabIndex = 10
-        Me.ButtonUpdate.Text = "Edit"
+        Me.ButtonUpdate.Text = "Update"
         Me.ButtonUpdate.UseVisualStyleBackColor = True
         '
-        'Button1
+        'ButtonDelete
         '
-        Me.Button1.Location = New System.Drawing.Point(401, 286)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(172, 46)
-        Me.Button1.TabIndex = 11
-        Me.Button1.Text = "Delete"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.ButtonDelete.Location = New System.Drawing.Point(401, 286)
+        Me.ButtonDelete.Name = "ButtonDelete"
+        Me.ButtonDelete.Size = New System.Drawing.Size(172, 46)
+        Me.ButtonDelete.TabIndex = 11
+        Me.ButtonDelete.Text = "Delete"
+        Me.ButtonDelete.UseVisualStyleBackColor = True
         '
         'ButtonRead
         '
-        Me.ButtonRead.Location = New System.Drawing.Point(498, 142)
+        Me.ButtonRead.Location = New System.Drawing.Point(498, 171)
         Me.ButtonRead.Name = "ButtonRead"
         Me.ButtonRead.Size = New System.Drawing.Size(75, 23)
         Me.ButtonRead.TabIndex = 12
         Me.ButtonRead.Text = "Read"
         Me.ButtonRead.UseVisualStyleBackColor = True
         '
+        'TextBoxHiddenId
+        '
+        Me.TextBoxHiddenId.Location = New System.Drawing.Point(280, 116)
+        Me.TextBoxHiddenId.Name = "TextBoxHiddenId"
+        Me.TextBoxHiddenId.Size = New System.Drawing.Size(100, 20)
+        Me.TextBoxHiddenId.TabIndex = 13
+        Me.TextBoxHiddenId.Visible = False
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(971, 539)
+        Me.Controls.Add(Me.TextBoxHiddenId)
         Me.Controls.Add(Me.ButtonRead)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.ButtonDelete)
         Me.Controls.Add(Me.ButtonUpdate)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.DataGridView1)
@@ -185,6 +202,8 @@ Partial Class Form1
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Button2 As Button
     Friend WithEvents ButtonUpdate As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents ButtonDelete As Button
     Friend WithEvents ButtonRead As Button
+    Friend WithEvents TextBoxHiddenId As TextBox
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
 End Class

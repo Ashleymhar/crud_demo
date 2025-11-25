@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Drawing.Text
+Imports MySql.Data.MySqlClient
 
 
 Public Class Form1
@@ -45,39 +46,15 @@ Public Class Form1
                 Dim table As New DataTable() ' table object
                 adapter.Fill(table) ' from adapter to table object
                 DataGridView1.DataSource = table ' display to DataGridView
-                DataGridView1.Columns("id").ReadOnly = True ' make ID column read-only
+                DataGridView1.Columns("id"). Visible = False ' make ID column read-only
+                DataGridView1.("is_deleted").Visible = False
             End Using
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If DataGridView1.SelectedRows.Count > 0 Then
-            Dim selectedRow As DataGridViewRow = DataGridView1.SelectedRows(0)
-            Dim id As Integer = CInt(selectedRow.Cells("id").Value)
 
-            Dim query As String = "DELETE FROM students_tbl WHERE id = @id"
-            Try
-                Using conn As New MySqlConnection("server=localhost;userid=root;password=root;database=crud_demo_db;")
-                    conn.Open()
-                    Using cmd As New MySqlCommand(query, conn)
-                        cmd.Parameters.AddWithValue("@id", id)
-                        Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
-                        If rowsAffected > 0 Then
-                            MessageBox.Show("Record Deleted Successfully")
-                        Else
-                            MessageBox.Show("No matching record found")
-                        End If
-                    End Using
-                End Using
-            Catch ex As Exception
-                MessageBox.Show("Error: " & ex.Message)
-            End Try
-        Else
-            MessageBox.Show("Please select a row to delete")
-        End If
-    End Sub
 
     Private Sub ButtonUpdate_Click(sender As Object, e As EventArgs) Handles ButtonUpdate.Click
         DataGridView1.EndEdit()
@@ -118,4 +95,30 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+        If e.RowIndex.ToString >= 0 Then
+            Dim selectedRow As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
+            TextBoxName.Text = selectedRow.Cells("Name").Value.ToString()
+            TextBoxAge.Text = selectedRow.Cells("Age").Value.ToString()
+            TextBoxEmail.Text = selectedRow.Cells("Email").Value.ToString()
+
+            TextBoxHiddenId.Text = selectedRow.Cells("id").Value.ToString()
+        End If
+
+    End Sub
+
+    Private Sub ButtonDelete_Click(sender As Object, e As EventArgs) Handles ButtonDelete.Click
+        Dim query As String = "DELETE FROM 'crud_demo_db'.'students_tbl' SET 'is_deleted' = 1 WHERE ('id'=@id);"
+        Try
+            Using conn As New MySqlConnection("server=localhost;userid=root;password=root;database=crud_demo_db;")
+                conn.Open()
+                Using cmd As New MySqlCommand(query, conn)
+                    cmd.Parameters.AddWithValue("id", CInt(TextBoxHiddenId.Text))
+                    cmd.ExecuteNonQuery()
+                    MessageBox.Show("Record Deleted Successfully")
+                    Text
+
+
+    End Sub
 End Class
