@@ -45,6 +45,7 @@ Public Class Form1
                 Dim table As New DataTable() ' table object
                 adapter.Fill(table) ' from adapter to table object
                 DataGridView1.DataSource = table ' display to DataGridView
+                DataGridView1.Columns("id").ReadOnly = True ' make ID column read-only
             End Using
         Catch ex As Exception
             MsgBox(ex.Message)
