@@ -32,7 +32,6 @@ Partial Class Form1
         Me.TextBoxEmail = New System.Windows.Forms.TextBox()
         Me.ButtonInsert = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.ButtonUpdate = New System.Windows.Forms.Button()
         Me.ButtonDelete = New System.Windows.Forms.Button()
         Me.ButtonRead = New System.Windows.Forms.Button()
@@ -115,15 +114,6 @@ Partial Class Form1
         Me.DataGridView1.Size = New System.Drawing.Size(432, 150)
         Me.DataGridView1.TabIndex = 8
         '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(192, 284)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(203, 50)
-        Me.Button2.TabIndex = 9
-        Me.Button2.Text = "SELECT"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'ButtonUpdate
         '
         Me.ButtonUpdate.Location = New System.Drawing.Point(401, 230)
@@ -144,9 +134,9 @@ Partial Class Form1
         '
         'ButtonRead
         '
-        Me.ButtonRead.Location = New System.Drawing.Point(498, 171)
+        Me.ButtonRead.Location = New System.Drawing.Point(195, 286)
         Me.ButtonRead.Name = "ButtonRead"
-        Me.ButtonRead.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonRead.Size = New System.Drawing.Size(200, 50)
         Me.ButtonRead.TabIndex = 12
         Me.ButtonRead.Text = "Read"
         Me.ButtonRead.UseVisualStyleBackColor = True
@@ -173,7 +163,6 @@ Partial Class Form1
         Me.Controls.Add(Me.ButtonRead)
         Me.Controls.Add(Me.ButtonDelete)
         Me.Controls.Add(Me.ButtonUpdate)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.ButtonInsert)
         Me.Controls.Add(Me.Label3)
@@ -200,7 +189,6 @@ Partial Class Form1
     Friend WithEvents TextBoxEmail As TextBox
     Friend WithEvents ButtonInsert As Button
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Button2 As Button
     Friend WithEvents ButtonUpdate As Button
     Friend WithEvents ButtonDelete As Button
     Friend WithEvents ButtonRead As Button
